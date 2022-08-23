@@ -10,7 +10,7 @@ def prime_sieve(limit):
     return [2] + [2 * i + 1 for i in range(1, limit // 2) if sieve[i]]
 
 
-def prime_factorisation(number):
+def prime_factorization(number):
     """returns dictionary in the form {factor_1: exponent,...}"""
     if is_prime(number):
         return {number: 1}
