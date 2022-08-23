@@ -71,15 +71,9 @@ def is_prime(number):
 
 def all_prime(prime_list):
     """returns True if all elements of iterable are prime"""
-    for number in prime_list:
-        if not is_prime(number):
-            return False
-    return True
+    return all([is_prime(x) for x in prime_list])
 
 
 def any_prime(prime_list):
     """returns True if any element of iterable is prime"""
-    for number in prime_list:
-        if is_prime(number):
-            return True
-    return False
+    return any([is_prime(x) for x in prime_list])
